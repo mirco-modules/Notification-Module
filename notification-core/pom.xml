@@ -47,6 +47,8 @@
         <mapstruct.version>1.5.5.Final</mapstruct.version>
         <hibernate.version>6.6.1.Final</hibernate.version>
 
+        <notification.version>1.0.0</notification.version>
+
         <ms-core.version>1.5.0</ms-core.version>
         <jhipster-framework.version>8.4.0</jhipster-framework.version>
         <springdoc-openapi-starter-webmvc-api.version>2.6.0</springdoc-openapi-starter-webmvc-api.version>
@@ -64,6 +66,12 @@
             <groupId>tech.jhipster</groupId>
             <artifactId>jhipster-framework</artifactId>
             <version>${jhipster-framework.version}</version>
+        </dependency>
+        <!-- Notification -->
+        <dependency>
+            <groupId>org.khasanof.notification</groupId>
+            <artifactId>notification-dto</artifactId>
+            <version>${notification.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -115,6 +123,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.angus</groupId>
+            <artifactId>jakarta.mail</artifactId>
         </dependency>
     </dependencies>
 
