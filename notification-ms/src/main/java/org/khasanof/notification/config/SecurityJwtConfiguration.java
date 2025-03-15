@@ -1,13 +1,12 @@
 package org.khasanof.notification.config;
 
-import static org.khasanof.notification.security.SecurityUtils.AUTHORITIES_KEY;
-import static org.khasanof.notification.security.SecurityUtils.JWT_ALGORITHM;
 
 import com.nimbusds.jose.jwk.source.ImmutableSecret;
 import com.nimbusds.jose.util.Base64;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
-import org.khasanof.notification.management.SecurityMetersService;
+
+import org.khasanof.core.management.SecurityMetersService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,6 +18,9 @@ import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
 import org.springframework.security.oauth2.jwt.NimbusJwtEncoder;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
 import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
+
+import static org.khasanof.core.security.JwtSecurityUtils.AUTHORITIES_KEY;
+import static org.khasanof.core.security.JwtSecurityUtils.JWT_ALGORITHM;
 
 @Configuration
 public class SecurityJwtConfiguration {

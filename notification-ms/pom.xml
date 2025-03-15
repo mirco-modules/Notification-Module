@@ -65,6 +65,10 @@
         <properties-maven-plugin.version>1.2.1</properties-maven-plugin.version>
         <sonar-maven-plugin.version>3.11.0.3922</sonar-maven-plugin.version>
         <spotless-maven-plugin.version>2.43.0</spotless-maven-plugin.version>
+
+        <ms-core.version>1.5.0</ms-core.version>
+        <notification.version>1.0.0</notification.version>
+        <jhipster-framework.version>8.7.1</jhipster-framework.version>
     </properties>
 
     <dependencyManagement>
@@ -80,6 +84,17 @@
     </dependencyManagement>
 
     <dependencies>
+        <!-- Ms Core -->
+        <dependency>
+            <groupId>org.khasanof</groupId>
+            <artifactId>ms-core</artifactId>
+            <version>${ms-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.khasanof.notification</groupId>
+            <artifactId>notification-core</artifactId>
+            <version>${notification.version}</version>
+        </dependency>
         <dependency>
             <groupId>tech.jhipster</groupId>
             <artifactId>jhipster-framework</artifactId>
