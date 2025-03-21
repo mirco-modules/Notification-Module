@@ -3,7 +3,7 @@ package org.khasanof.notification.service.sender;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.khasanof.notification.NotificationDto;
+import org.khasanof.notification.NotificationDTO;
 import org.khasanof.notification.channels.TelegramChannelDto;
 import org.khasanof.notification.config.TelegramConfiguration;
 import org.springframework.http.HttpMethod;
@@ -20,7 +20,7 @@ public class TelegramChannelSender implements ChannelSender<TelegramChannelDto> 
     private final TelegramConfiguration telegramConfiguration;
 
     @Override
-    public TelegramChannelDto extract(NotificationDto notificationDto) {
+    public TelegramChannelDto extract(NotificationDTO notificationDto) {
         return notificationDto.getTelegramChannelDto();
     }
 

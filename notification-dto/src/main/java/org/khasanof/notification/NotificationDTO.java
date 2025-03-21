@@ -14,7 +14,7 @@ import java.io.Serializable;
 @Accessors(chain = true)
 @Getter
 @Setter
-public class NotificationDto implements Serializable {
+public class NotificationDTO implements Serializable {
 
     private LogChannelDto logChannelDto;
     private EmailChannelDto emailChannelDto;

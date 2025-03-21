@@ -1,7 +1,7 @@
 package org.khasanof.notification.service.sender;
 
 import lombok.extern.slf4j.Slf4j;
-import org.khasanof.notification.NotificationDto;
+import org.khasanof.notification.NotificationDTO;
 import org.khasanof.notification.channels.LogChannelDto;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class LogChannelSender implements ChannelSender<LogChannelDto> {
 
     @Override
-    public LogChannelDto extract(NotificationDto notificationDto) {
+    public LogChannelDto extract(NotificationDTO notificationDto) {
         return notificationDto.getLogChannelDto();
     }
 

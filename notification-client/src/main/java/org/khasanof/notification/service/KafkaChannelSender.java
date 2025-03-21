@@ -1,7 +1,7 @@
 package org.khasanof.notification.service;
 
 import lombok.extern.slf4j.Slf4j;
-import org.khasanof.notification.NotificationDto;
+import org.khasanof.notification.NotificationDTO;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 public class KafkaChannelSender implements ChannelSender {
 
     @Override
-    public void send(NotificationDto notificationDto) {
+    public void send(NotificationDTO notificationDto) {
 
     }
 }

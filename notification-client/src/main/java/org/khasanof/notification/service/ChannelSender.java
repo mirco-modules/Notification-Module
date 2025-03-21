@@ -1,6 +1,6 @@
 package org.khasanof.notification.service;
 
-import org.khasanof.notification.NotificationDto;
+import org.khasanof.notification.NotificationDTO;
 
 /**
  * @author Nurislom
@@ -9,5 +9,5 @@ import org.khasanof.notification.NotificationDto;
  */
 public interface ChannelSender {
 
-    void send(NotificationDto notificationDto);
+    void send(NotificationDTO notificationDto);
 }

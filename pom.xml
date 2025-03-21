@@ -13,6 +13,7 @@
     <modules>
         <module>notification-dto</module>
         <module>notification-core</module>
+        <module>notification-client</module>
         <module>notification-ms</module>
     </modules>
 

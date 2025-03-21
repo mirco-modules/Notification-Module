@@ -4,7 +4,7 @@ import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.extern.slf4j.Slf4j;
 import org.khasanof.core.errors.exception.BadRequestAlertException;
-import org.khasanof.notification.NotificationDto;
+import org.khasanof.notification.NotificationDTO;
 import org.khasanof.notification.channels.EmailChannelDto;
 import org.khasanof.notification.config.MailConfiguration;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -22,7 +22,7 @@ public class EmailChannelSender implements ChannelSender<EmailChannelDto> {
     }
 
     @Override
-    public EmailChannelDto extract(NotificationDto notificationDto) {
+    public EmailChannelDto extract(NotificationDTO notificationDto) {
         return notificationDto.getEmailChannelDto();
     }
 

@@ -1,7 +1,7 @@
 package org.khasanof.notification.service.sender;
 
 import org.apache.commons.lang3.StringUtils;
-import org.khasanof.notification.NotificationDto;
+import org.khasanof.notification.NotificationDTO;
 import org.khasanof.notification.channels.ChannelMarker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,7 @@ public interface ChannelSender<T extends ChannelMarker> {
 
     Logger log = LoggerFactory.getLogger(ChannelSender.class);
 
-    default void send(NotificationDto message) {
+    default void send(NotificationDTO message) {
         T channelDto = extract(message);
         if (Objects.isNull(channelDto)) {
             return;
@@ -24,7 +24,7 @@ public interface ChannelSender<T extends ChannelMarker> {
         send(channelDto);
     }
 
-    T extract(NotificationDto notificationDto);
+    T extract(NotificationDTO notificationDto);
 
     void send(T message);
 
