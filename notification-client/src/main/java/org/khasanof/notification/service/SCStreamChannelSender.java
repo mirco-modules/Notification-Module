@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  */
 @Slf4j
 @Service
-public class KafkaChannelSender implements ChannelSender {
+public class SCStreamChannelSender implements ChannelSender {
 
     @Override
     public void send(NotificationDTO notificationDto) {

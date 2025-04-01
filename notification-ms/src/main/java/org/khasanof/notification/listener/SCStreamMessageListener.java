@@ -15,8 +15,8 @@ import java.util.function.Consumer;
  */
 @Slf4j
 @RequiredArgsConstructor
-@Component(SCMessageListener.NAME)
-public class SCMessageListener implements Consumer<NotificationDTO> {
+@Component(SCStreamMessageListener.NAME)
+public class SCStreamMessageListener implements Consumer<NotificationDTO> {
 
     public static final String NAME = "notification-listener";
 
