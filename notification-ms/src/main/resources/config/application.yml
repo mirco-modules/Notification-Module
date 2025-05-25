@@ -117,6 +117,16 @@ spring:
           binder:
             brokers: localhost:9092
             auto-create-topics: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: khasanof373@gmail.com
+    password: oidlpfecgzshgcuk
+    properties:
+      mail.transport.protocol: smtp
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.debug: true
   profiles:
     # The commented value for `active` can be replaced with valid Spring profiles to load.
     # Otherwise, it will be filled in by maven when building the JAR file

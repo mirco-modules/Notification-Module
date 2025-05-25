@@ -2,6 +2,7 @@ package org.khasanof.notification.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import org.khasanof.core.annotation.Tenancy;
 import org.khasanof.core.domain.AbstractAuditingEntity;
 import org.khasanof.notification.domain.enumeration.Status;
 
@@ -13,6 +14,7 @@ import java.util.UUID;
  * A Message.
  */
 @Entity
+@Tenancy
 @Table(name = "message")
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class Message extends AbstractAuditingEntity {

@@ -43,17 +43,39 @@ spring:
         prefer-ip-address: true
       host: localhost
       port: 8500
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: khasanof373@gmail.com
+    password: oidlpfecgzshgcuk
+    properties:
+      mail.transport.protocol: smtp
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.debug: true
   datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/notificationMs
-    username: notificationMs
-    password:
-    hikari:
-      poolName: Hikari
-      auto-commit: false
+    common:
+      driver-class-name: org.postgresql.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+      url: jdbc:postgresql://localhost:5432/user_single_db
+      username: user_db
+      password: 123
+      hikari:
+        poolName: Hikari
+        auto-commit: false
+    tenant:
+      driver-class-name: org.postgresql.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+      url: jdbc:postgresql://localhost:5432/user_multi_db
+      username: user_db
+      password: 123
+      hikari:
+        poolName: Hikari
+        auto-commit: false
   # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
   liquibase:
     contexts: prod
+    enabled: true
   thymeleaf:
     cache: true
 
@@ -123,3 +145,5 @@ jhipster:
 # ===================================================================
 
 # application:
+telegram:
+  default-sender: -1

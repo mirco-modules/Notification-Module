@@ -1,4 +1,4 @@
-package org.khasanof.notification.repository;
+package org.khasanof.notification.repository.tenancy;
 
 import org.khasanof.core.repository.base.multi.IGeneralMultiTenancyRepository;
 import org.khasanof.notification.domain.Message;

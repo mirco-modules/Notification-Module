@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.khasanof.notification.IntegrationTest;
 import org.khasanof.notification.domain.Message;
 import org.khasanof.notification.domain.enumeration.Status;
-import org.khasanof.notification.repository.MessageRepository;
+import org.khasanof.notification.repository.tenancy.MessageRepository;
 import org.khasanof.notification.service.dto.MessageDTO;
 import org.khasanof.notification.service.mapper.MessageMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,6 @@ import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Random;
-import java.util.UUID;
 import java.util.concurrent.atomic.AtomicLong;
 
 import static org.assertj.core.api.Assertions.assertThat;
