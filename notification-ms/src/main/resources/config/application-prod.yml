@@ -57,8 +57,8 @@ spring:
     common:
       driver-class-name: org.postgresql.Driver
       type: com.zaxxer.hikari.HikariDataSource
-      url: jdbc:postgresql://localhost:5432/user_single_db
-      username: user_db
+      url: jdbc:postgresql://localhost:5432/hotel_common_db
+      username: hotel_db
       password: 123
       hikari:
         poolName: Hikari
@@ -66,8 +66,8 @@ spring:
     tenant:
       driver-class-name: org.postgresql.Driver
       type: com.zaxxer.hikari.HikariDataSource
-      url: jdbc:postgresql://localhost:5432/user_multi_db
-      username: user_db
+      url: jdbc:postgresql://localhost:5432/hotel_tenant_db
+      username: hotel_db
       password: 123
       hikari:
         poolName: Hikari
