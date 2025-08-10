@@ -29,6 +29,10 @@ management:
     sampling:
       probability: 1.0 # report 100% of traces
 
+tenancy:
+  database:
+    prefix: hotel_tenant_
+
 spring:
   devtools:
     restart:
