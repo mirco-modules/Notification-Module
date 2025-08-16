@@ -39,10 +39,10 @@ public class LiquibaseConfiguration {
     public SpringLiquibase tenancyLiquibase(
         @Qualifier("taskExecutor") Executor executor,
         LiquibaseProperties liquibaseProperties,
-        @LiquibaseDataSource ObjectProvider<DataSource> liquibaseDataSource
+        @LiquibaseDataSource ObjectProvider<DataSource> liquibaseDataSource,
+        @Qualifier("tenantDataSource") DataSource dataSource
     ) {
         DataSourceProperties dataSourceProperties = rootDataSourceProperties.getTenant();
-        DataSource dataSource = dataSourceProperties.initializeDataSourceBuilder().build();
 
         SpringLiquibase liquibase;
         if (Boolean.TRUE.equals(asyncStart)) {
@@ -87,10 +87,10 @@ public class LiquibaseConfiguration {
     public SpringLiquibase commonLiquibase(
         @Qualifier("taskExecutor") Executor executor,
         LiquibaseProperties liquibaseProperties,
-        @LiquibaseDataSource ObjectProvider<DataSource> liquibaseDataSource
+        @LiquibaseDataSource ObjectProvider<DataSource> liquibaseDataSource,
+        @Qualifier("commonDataSource") DataSource dataSource
     ) {
         DataSourceProperties dataSourceProperties = rootDataSourceProperties.getCommon();
-        DataSource dataSource = dataSourceProperties.initializeDataSourceBuilder().build();
 
         SpringLiquibase liquibase;
         if (Boolean.TRUE.equals(asyncStart)) {

@@ -64,18 +64,28 @@ spring:
       url: jdbc:postgresql://localhost:5432/hotel_common_db
       username: hotel_db
       password: 123
-      hikari:
-        poolName: Hikari
-        auto-commit: false
+    common-properties:
+      pool-name: NotificationCommonHikari
+      auto-commit: false
+      min-idle: 1              # минимальное количество простаивающих подключений
+      max-pool-size: 5         # максимальное количество подключений в пуле
+      idle-timeout: 30000          # (мс) время простоя перед закрытием соединения
+      max-life-time: 1800000        # (мс) максимальное время жизни коннекта
+      connection-timeout: 30000    # (мс) ожидание получения соединения
     tenant:
       driver-class-name: org.postgresql.Driver
       type: com.zaxxer.hikari.HikariDataSource
       url: jdbc:postgresql://localhost:5432/hotel_tenant_db
       username: hotel_db
       password: 123
-      hikari:
-        poolName: Hikari
-        auto-commit: false
+    tenant-properties:
+      pool-name: NotificationTenantHikari
+      auto-commit: false
+      min-idle: 1              # минимальное количество простаивающих подключений
+      max-pool-size: 5         # максимальное количество подключений в пуле
+      idle-timeout: 30000          # (мс) время простоя перед закрытием соединения
+      max-life-time: 1800000        # (мс) максимальное время жизни коннекта
+      connection-timeout: 30000    # (мс) ожидание получения соединения
   # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
   liquibase:
     contexts: prod
