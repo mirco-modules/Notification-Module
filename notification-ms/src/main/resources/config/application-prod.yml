@@ -59,11 +59,11 @@ spring:
       mail.debug: true
   datasource:
     common:
-      driver-class-name: org.postgresql.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
       type: com.zaxxer.hikari.HikariDataSource
-      url: jdbc:postgresql://localhost:5432/hotel_common_db
-      username: hotel_db
-      password: 123
+      url: jdbc:mysql://localhost:3306/hotel_common_db?useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: 10Bd58c:G%~h
     common-properties:
       pool-name: NotificationCommonHikari
       auto-commit: false
@@ -73,11 +73,11 @@ spring:
       max-life-time: 1800000        # (мс) максимальное время жизни коннекта
       connection-timeout: 30000    # (мс) ожидание получения соединения
     tenant:
-      driver-class-name: org.postgresql.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
       type: com.zaxxer.hikari.HikariDataSource
-      url: jdbc:postgresql://localhost:5432/hotel_tenant_db
-      username: hotel_db
-      password: 123
+      url: jdbc:mysql://localhost:3306/hotel_tenant_db?useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: 10Bd58c:G%~h
     tenant-properties:
       pool-name: NotificationTenantHikari
       auto-commit: false
